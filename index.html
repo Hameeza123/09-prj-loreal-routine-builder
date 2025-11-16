@@ -25,6 +25,8 @@
 
       <!-- Category Filter -->
       <div class="search-section">
+        <label for="productSearch" class="visually-hidden">Search products</label>
+        <input id="productSearch" type="search" placeholder="Search products by name or keyword…" />
         <select id="categoryFilter">
           <option value="" disabled selected>Choose a Category</option>
           <option value="cleanser">Cleansers</option>
@@ -44,7 +46,32 @@
 
       <!-- Selected Products -->
       <div class="selected-products">
-        <h2>Selected Products</h2>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+          "
+        >
+          <h2>Selected Products</h2>
+          <div>
+            <button
+              id="clearSelection"
+              class="generate-btn"
+              style="
+                background: var(--loreal-gold);
+                color: #111;
+                padding: 8px 12px;
+                font-size: 14px;
+                width: auto;
+                margin-left: 12px;
+              "
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
         <div id="selectedProductsList"></div>
         <button id="generateRoutine" class="generate-btn">
           <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
